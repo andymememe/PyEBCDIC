@@ -4,14 +4,14 @@ import reference
 FileIn = None
 FileOut = None
 
-if len(sys.argv) < 3 :
+if len(sys.argv) < 3:
     raise Exception("Not enough arguments.")
-else :
+else:
     FileIn = sys.argv[1]
     FileOut = sys.argv[2]
 
 o = open(FileOut, 'w')
 
-with open(FileIn, 'rt') as i :
-    for line in i :
+with open(FileIn, 'rt') as i:
+    for line in i:
         o.write(reference.table[line.strip('\n')])

@@ -4,9 +4,9 @@ import reference
 FileIn = None
 FileOut = None
 
-if len(sys.argv) < 3 :
+if len(sys.argv) < 3:
     raise Exception("Not enough arguments.")
-else :
+else:
     FileIn = sys.argv[1]
     FileOut = sys.argv[2]
 
@@ -15,7 +15,7 @@ o = open(FileOut, 'w')
 
 data = i.read()
 
-for c in data :
-    for pun, val in reference.table.items() :
-        if val == c :
+for c in data:
+    for pun, val in reference.table.items():
+        if val == c:
             o.write(pun + '\n')
